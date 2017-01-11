@@ -15,7 +15,7 @@ $mail = new PHPMailer;
 $mail->isSMTP();
   
 // Servidor SMTP
-$mail->Host = 'smtp.gmail.com'; //Se for GMAIL: smtp.gmail.com
+$mail->Host = 'endereco-do-seu-host-.com'; //Se for GMAIL: smtp.gmail.com
   
 // Usar autenticação SMTP
 $mail->SMTPAuth = true;

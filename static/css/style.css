@@ -1,0 +1,177 @@
+*{
+	padding:0;
+	margin:0;
+	box-sizing:border-box
+}
+
+html, body{
+	height: 100%;
+}
+
+.wrapper{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.1);
+	display: flex;
+	justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1{
+	font-size: 36px;	
+	padding: 10px 0;
+}
+
+form{	
+	width: 50%;
+	padding: 20px;
+	background: #fff;
+	text-align: center;
+	border-radius: 10px;
+}
+
+label{
+    display:none;
+}
+
+.input_group, .textarea_group {
+	font-family: Arial, FontAwesome;
+    width:100%;    
+	border: 2px solid #33593f;
+    margin:10px 0;
+    padding: 10px 0px 10px 15px;
+    font-size:24px;	
+}
+
+.textarea_group{
+	resize: vertical;
+}
+
+.input_group{
+	height:50px;	
+}
+
+.btn_send{
+	border: transparent;
+	padding: 15px 50px;
+	text-align: center;
+}
+
+.btn_send:active{
+	outline: transparent;
+    transform:translateY(2px);
+}
+
+/* MODAL */
+
+.modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 300px;   
+    z-index: 2;
+    visibility: hidden; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-perspective: 900px; 
+    -moz-perspective: 900px;
+    -ms-perspective: 900px;
+    perspective: 900px;
+}
+
+.modal-content{    
+    width: 100%;
+    position: relative;
+    padding: 120px 10px;
+    text-align: center;
+    color: #000;
+    background: #fbfbfb;
+    border-radius: 10px;    
+    border: 1px solid #909090;  
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.9);  
+    transition: ease-in 0.3s;
+    transform: rotateX(-60deg);
+    -webkit-transform: rotateX(-60deg);
+    -moz-transform: rotateX(-60deg);
+    -ms-transform: rotateX(-60deg); 
+}
+
+.modal-open{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: transparent;
+    background: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 20px 50px;
+    border-radius: 5px;
+}
+
+.modal-open:active{
+    outline: transparent;
+}
+
+.modal-loading, .modal-success {
+    text-align:center;
+}
+
+.modal-loading img, .modal-success img {
+    padding-bottom:10px;
+}
+
+.modal-success img {
+    width:70px;
+}
+
+.modal-close{
+    padding: 6px 25px;
+    border-radius: 8px;
+    border: transparent;
+    background: #dddddd;
+    outline: transparent;   
+    font-size: 16px;        
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);    
+}
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.5);
+    transition: ease-in 0.4s;
+}
+
+.modal-show {
+    opacity: 1;
+    visibility: visible;    
+}
+
+.modal-animate{
+    transition: ease-in 0.3s;
+    transform: rotateX(0deg);
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);   
+}
+
+/* TOGGLE LOADING - SUCESS MESSAGE ON MODAL */
+.hidden{
+    display: none;
+}
+
+.active{
+    display: initial;
+}

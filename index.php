@@ -7,6 +7,8 @@
  
     <link rel="stylesheet" href="static/css/style.css">
     <link rel="stylesheet" href="static/font-awesome/css/font-awesome.min.css">
+    <script src="static/js/jquery.min.js"></script>
+    <script src="static/js/script.js"></script>
 </head>
 <body>
  
@@ -47,4 +49,3 @@
 <div class="overlay"></div>
 </body>
 </html>
-</code>
